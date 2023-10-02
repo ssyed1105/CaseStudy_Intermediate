@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SauceDemo]" guice-stage="DEVELOPMENT">
+  <parameter name="browserName" value="chrome"/>
+  <parameter name="url" value="https://www.saucedemo.com/"/>
+  <test thread-count="5" name="SecondCase(failed)">
+    <parameter name="password" value="secret_Invalidpwd"/>
+    <parameter name="username" value="standard_Invaliduser"/>
+    <classes>
+      <class name="base.TestBase">
+        <methods>
+          <include name="afterSuiteMethod"/>
+          <include name="afterTestMethod"/>
+          <include name="afterMethodMethod"/>
+          <include name="setUp"/>
+          <include name="beforeMethodMethod"/>
+          <include name="loginTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- base.TestBase -->
+    </classes>
+  </test> <!-- SecondCase(failed) -->
+</suite> <!-- Failed suite [SauceDemo] -->

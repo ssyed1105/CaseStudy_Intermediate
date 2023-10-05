@@ -1,0 +1,7 @@
+TC,endPoint,delayID,expectedStatusCode,emailVar,passwordVar
+1,users,1,200,null,null
+2,users,-5,200,null,null
+3,login,null,200,eve.holt@reqres.in,cityslicka
+4,login,null,400,peter@klaven,null
+5,register,null,200,eve.holt@reqres.in,somepass
+6,register,null,400,sydney@fife,null

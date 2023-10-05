@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "f07b345c-6586-464c-9b47-12a1feba9a1b",
+		"name": "SDET-Learning-Casestudy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28789175"
+	},
+	"item": [
+		{
+			"name": "users-endpoint-positive",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let inputVar = pm.iterationData.get(\"expectedStatusCode\");\r",
+							"let TCVar = pm.iterationData.get(\"TC\");\r",
+							"if (TCVar == \"1\"){\r",
+							"    pm.test(\"Positive Case - Response code is 200 OK\", function() {\r",
+							"        pm.response.to.have.status(pm.variables.get(\"expectedStatusCode\"));\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var endPoint = pm.iterationData.get(\"endPoint\");\r",
+							"postman.setEnvironmentVariable(\"endPoint\", endPoint);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "users",
+						"value": "{{users}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://reqres.in/api/{{endPoint}}?delay={{delayID}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"{{endPoint}}"
+					],
+					"query": [
+						{
+							"key": "delay",
+							"value": "{{delayID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users-endpoint-positive2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let inputVar = pm.iterationData.get(\"expectedStatusCode\");\r",
+							"let TCVar = pm.iterationData.get(\"TC\");\r",
+							"if (TCVar == \"2\"){\r",
+							"    pm.test(\"Positive Case - Response code is 200 OK\", function() {\r",
+							"        pm.response.to.have.status(pm.variables.get(\"expectedStatusCode\"));\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var endPoint = pm.iterationData.get(\"endPoint\");\r",
+							"postman.setEnvironmentVariable(\"endPoint\", endPoint);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "users",
+						"value": "{{users}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://reqres.in/api/{{endPoint}}?delay={{delayID}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"{{endPoint}}"
+					],
+					"query": [
+						{
+							"key": "delay",
+							"value": "{{delayID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login-endpoint-positive",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let inputVar = pm.iterationData.get(\"expectedStatusCode\");\r",
+							"let TCVar = pm.iterationData.get(\"TC\");\r",
+							"if (TCVar == \"3\"){\r",
+							"    pm.test(\"Positive Case - Response code is 200 OK\", function() {\r",
+							"        pm.response.to.have.status(pm.variables.get(\"expectedStatusCode\"));\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var endPoint = pm.iterationData.get(\"endPoint\");\r",
+							"postman.setEnvironmentVariable(\"endPoint\", endPoint);\r",
+							"var emailVar = pm.iterationData.get(\"emailVar\");\r",
+							"var passwordVar = pm.iterationData.get(\"passwordVar\");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{emailVar}}\",\r\n    \"password\" : \"{{passwordVar}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/{{endPoint}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"{{endPoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login-endpoint-negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let inputVar = pm.iterationData.get(\"expectedStatusCode\");\r",
+							"let TCVar = pm.iterationData.get(\"TC\");\r",
+							"if (TCVar == \"4\"){\r",
+							"    pm.test(\"Negative Case - Response code is 400 Bad Request\", function() {\r",
+							"        pm.response.to.have.status(pm.variables.get(\"expectedStatusCode\"));\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var endPoint = pm.iterationData.get(\"endPoint\");\r",
+							"postman.setEnvironmentVariable(\"endPoint\", endPoint);\r",
+							"var emailVar = pm.iterationData.get(\"emailVar\");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{emailVar}}\",\r\n    \"password\" : \"{{passwordVar}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/{{endPoint}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"{{endPoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register-endpoint-positive",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let inputVar = pm.iterationData.get(\"expectedStatusCode\");\r",
+							"let TCVar = pm.iterationData.get(\"TC\");\r",
+							"if (TCVar == \"5\"){\r",
+							"    pm.test(\"Positive Case - Response code is 200 OK\", function() {\r",
+							"        pm.response.to.have.status(pm.variables.get(\"expectedStatusCode\"));\r",
+							"    });\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var endPoint = pm.iterationData.get(\"endPoint\");\r",
+							"postman.setEnvironmentVariable(\"endPoint\", endPoint);\r",
+							"var emailVar = pm.iterationData.get(\"emailVar\");\r",
+							"var passwordVar = pm.iterationData.get(\"passwordVar\");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{emailVar}}\",\r\n    \"password\" : \"{{passwordVar}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/{{endPoint}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"{{endPoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register-endpoint-negative",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let inputVar = pm.iterationData.get(\"expectedStatusCode\");\r",
+							"let TCVar = pm.iterationData.get(\"TC\");\r",
+							"if (TCVar == \"6\"){\r",
+							"    pm.test(\"Negative Case - Response code is 400 Bad Request\", function() {\r",
+							"        pm.response.to.have.status(pm.variables.get(\"expectedStatusCode\"));\r",
+							"    });\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var endPoint = pm.iterationData.get(\"endPoint\");\r",
+							"postman.setEnvironmentVariable(\"endPoint\", endPoint);\r",
+							"var emailVar = pm.iterationData.get(\"emailVar\");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{emailVar}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/{{endPoint}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"{{endPoint}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "endPoint",
+			"value": "{{endPoint}}"
+		},
+		{
+			"key": "login",
+			"value": "{{login}}"
+		}
+	]
+}

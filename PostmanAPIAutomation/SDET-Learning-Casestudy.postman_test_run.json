@@ -1,0 +1,258 @@
+{
+	"id": "37dab640-3485-4c4c-805b-b07d1c510ab8",
+	"name": "SDET-Learning-Casestudy",
+	"timestamp": "2023-10-05T17:23:07.660Z",
+	"collection_id": "28789175-f07b345c-6586-464c-9b47-12a1feba9a1b",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 6,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-10-05T17:22:49.628Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "d0911a85-a491-450c-bc3e-c25d659e5720",
+			"name": "users-endpoint-positive",
+			"url": "https://reqres.in/api/register?delay=null",
+			"time": 304,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {
+				"Positive Case - Response code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2166,
+				330,
+				324,
+				328,
+				331,
+				304
+			],
+			"allTests": [
+				{
+					"Positive Case - Response code is 200 OK": true
+				},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "b252f9d1-3048-467d-9d8d-060220ae9a81",
+			"name": "users-endpoint-positive2",
+			"url": "https://reqres.in/api/register?delay=null",
+			"time": 327,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {
+				"Positive Case - Response code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1319,
+				346,
+				328,
+				328,
+				303,
+				327
+			],
+			"allTests": [
+				{},
+				{
+					"Positive Case - Response code is 200 OK": true
+				},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "e80cb3c3-b6d2-4809-b06c-340a95a2a0e5",
+			"name": "login-endpoint-positive",
+			"url": "https://reqres.in/api/register",
+			"time": 315,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {
+				"Positive Case - Response code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				315,
+				336,
+				316,
+				317,
+				345,
+				315
+			],
+			"allTests": [
+				{},
+				{},
+				{
+					"Positive Case - Response code is 200 OK": true
+				},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "38ad1a29-9dc0-42bc-a3fb-1d72179c056b",
+			"name": "login-endpoint-negative",
+			"url": "https://reqres.in/api/register",
+			"time": 365,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {
+				"Negative Case - Response code is 400 Bad Request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				310,
+				329,
+				311,
+				315,
+				318,
+				365
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{
+					"Negative Case - Response code is 400 Bad Request": true
+				},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "fabe9260-2b60-4a81-9ad7-668adec12a86",
+			"name": "register-endpoint-positive",
+			"url": "https://reqres.in/api/register",
+			"time": 303,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {
+				"Positive Case - Response code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				323,
+				310,
+				329,
+				332,
+				303,
+				303
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{
+					"Positive Case - Response code is 200 OK": true
+				},
+				{}
+			]
+		},
+		{
+			"id": "06f0ef90-44da-474c-b1d3-4601674b6a56",
+			"name": "register-endpoint-negative",
+			"url": "https://reqres.in/api/register",
+			"time": 332,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Negative Case - Response code is 400 Bad Request": true
+			},
+			"testPassFailCounts": {
+				"Negative Case - Response code is 400 Bad Request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				347,
+				366,
+				339,
+				338,
+				324,
+				332
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{
+					"Negative Case - Response code is 400 Bad Request": true
+				}
+			]
+		}
+	],
+	"count": 6,
+	"totalTime": 14572,
+	"collection": {
+		"requests": [
+			{
+				"id": "d0911a85-a491-450c-bc3e-c25d659e5720",
+				"method": "GET"
+			},
+			{
+				"id": "b252f9d1-3048-467d-9d8d-060220ae9a81",
+				"method": "GET"
+			},
+			{
+				"id": "e80cb3c3-b6d2-4809-b06c-340a95a2a0e5",
+				"method": "POST"
+			},
+			{
+				"id": "38ad1a29-9dc0-42bc-a3fb-1d72179c056b",
+				"method": "POST"
+			},
+			{
+				"id": "fabe9260-2b60-4a81-9ad7-668adec12a86",
+				"method": "POST"
+			},
+			{
+				"id": "06f0ef90-44da-474c-b1d3-4601674b6a56",
+				"method": "POST"
+			}
+		]
+	}
+}

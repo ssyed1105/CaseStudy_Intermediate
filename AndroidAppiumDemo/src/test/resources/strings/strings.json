@@ -1,0 +1,11 @@
+{
+	"resources":{
+		"err_invalid_username_or_password":"Username and password do not match any user in this service.",
+		"product_title":"PRODUCTS",
+		"products_page_slb_title":"Sauce Labs Backpack",
+		"products_page_slb_price":"$29.99",
+		"product_details_page_slb_title":"Sauce Labs Backpack",
+		"product_details_page_slb_txt":"carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.",
+		"product_details_page_slb_price":"$29.99"
+	}
+}
